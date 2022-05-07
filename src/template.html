@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>SiyaWeb</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="top-menu">
+                <li><button id="btn-side-menu" data-menu-id="side-menu"><i class="fa fa-bars"></i></button></li>
+                <li class="logo"><span>Siya</span><span>Web</span></li>
+                <li><a href="#"><i class="fa fa-user"></i></a></li>
+                <li><button id="btn-contact"><i class="fa fa-contact-book"></i><span class="sound-wave"></span></button>  
+                    <ul id="contact">
+                        <li><b>Contact Details</b></li>
+                        <li><i class="fa fa-phone"></i>: <span>+27 66 411 8179</span></li>
+                        <li>Email: <span>siyabongahenry23@gmail.com</span></li>
+                        <li>Alternative: <span>vilakazish23@gmail.com</span></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="side-menu side-menu-ml" id="side-menu">
+                <li class="header">Navigation Panel</li>
+                <li><a href="#about">About S.H Vilakazi</a></li>
+                <li>
+                    <a href="#skills">Skills</a>
+                    <ul>
+                        <li><a href="#cl">Computer Literacy</a></li>
+                        <li><a href="#wd">Web Development</a></li>
+                        <li><a href="#pjm">Project Management</a></li>
+                        <li><a href="#report">Writing Reports</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                    <ul>
+                        <li><a href="#os">Online Store</a></li>
+                        <li><a href="#ca">Chatting App</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>cls
+    <div class="container">
+        <div class="about-section" id="about">  
+            <h1>About <span>S.H Vilakazi</span></h1>
+            <div class="row">
+                <div>                      
+                    <div class="txt-center"> 
+                        <div class="image-container">         
+                            <img src="../src/Images/prof_img.jpg" alt="Image not found">
+                            <div class="name">
+                                <div>
+                                    <b>S.H Vilakazi</b>
+                                    <div>
+                                        <i>Full Stack Web Developer 
+                                            <span class="d-inline-b">(Part Time)</span>
+                                        </i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div onclick="removeElement(this)">
+                            <div class="typing-alert typing-alert-anim">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div id="welcomeMSG"></div> 
+                        </div>
+                    </div>     
+                </div>
+                <div>
+                    <div class="intro">              
+                        <h2>Who am I?</h2>
+                        <div>
+                            <p>
+                                I can simply describe myself as someone who likes to explore. Therefore,
+                                I spent most of my time doing researches about things that invoke my
+                                interest. On top of that I like implementing what I learn through the 
+                                researches to have a better undestanding. Lastly I am tech enthusiast.  
+                            </p>
+                            <button class="content-view-btn" data-btn-newText="Career" data-content-id="career">
+                                Career <i class="fa fa-caret-down"></i>
+                            </button> 
+                            <p class="hidden-content" id="career">
+                                    My fascination has always been in engineering. 
+                                    I grew up enjoying seeing what engineers are capable of, thus, 
+                                    it has always been my wish to be in the engineering field.
+                                <br><br>
+                                <a href="#qualification">See my qualifications</a> 
+                            </p>
+                            <button class="content-view-btn" data-btn-newText="Hobbies" data-content-id="hobbies">
+                                Hobbies <i class="fa fa-caret-down"></i>
+                            </button> 
+                            <p class="hidden-content" id="hobbies">
+                                My favourite hobby is web development. The reason I enjoy web development 
+                                is because all the tools that are required are easy accessible and cost free. 
+                                As someone who love coding it becomes much more interesting 
+                                when I implement my coding knowledge to something I can see. I spend
+                                a tremendous amount of time doing researches about web development, therefore, 
+                                I barely see the existence of holidays. 
+                                <a href="#qualification">You can click here to see my projects</a> 
+                            </p>
+                        </div>
+                        <h2>Qualifications</h2>
+                        <p>
+                            I completed a Bachelor of Science degree majoring in Physics and Engineering subjects, at 
+                            the University of the Free State in 2021. As for the engineering side, I mostly took electrical engineering
+                            modules as my majors. 
+                        <br><br>
+                        </p>
+                        <button class="content-view-btn" data-btn-newText="Career" data-content-id="degree-info">
+                            Degree-Info<i class="fa fa-caret-down"></i>
+                        </button> 
+                        <p class="hidden-content" id="degree-info">
+                            Find out more about the degree at <a href="https://www.ufs.ac.za/natagri/faculty-of-natural-and-agricultural-sciences-home/unlisted-pages/ensci-engineering-sciences/about-ensci" target="_blank">UFS Engineering Sciences</a>
+                        </p>
+                    </div>
+                </div>                  
+            </div> 
+        </div> 
+        <div class="skills-section">
+            <h1 id="skills">Skills</h1>
+            <p class="intro-paragraph"> 
+                This section contains all the skills I developed while I was still studying and the skills
+                I taught myself.
+            </p>
+            <div id="cl">
+                <h2>Computer Literacy</h2>
+                <p class="intro-paragraph">
+                    I had computer literacy as one of my major in my first year of study. At that time, 
+                    I had no knowledge of using computers, therefore, I encountered a lot of challenges
+                    but eventually became a master.
+                </p>
+                <div class="row">
+                    <div class="column">
+                        <h3>Microft Office 2016 (4yrs experience)</h3> 
+                        <ul>
+                            <li>
+                                <img src="/src/Images/MsOffice/word.png" alt="Word Icon">
+                                <br>
+                                MS Word
+                            </li>
+                            <li>
+                                <img src="/src/Images/MsOffice/excel.png" alt="excel Icon">
+                                <br>
+                                MS Excel
+                            </li>
+                            <li>
+                                <img src="/src/Images/MsOffice/powerpoint.png" alt="powerpoint Icon">
+                                <br>
+                                MS Powerpoint
+                            </li>
+                        </ul> 
+                    </div>
+                    <div class="column">  
+                        <h3>Experience</h3>
+                        <div class="slide-container">
+                            <div class="slide-progress">
+                                <div class="progress-bars-h">
+                                    <div class="progress-column">
+                                        <div class="progress-container">
+                                            <span class="progress progress-anim width" style="width:0%;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress-column">
+                                        <div class="progress-container">
+                                            <span class="progress width" style="width:0%;"></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress-column">
+                                        <div class="progress-container">
+                                            <span class="progress width" style="width:0%;"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="slide-element" style="margin-left:0%;"> 
+                                Using MS Word became fascinating the day I started learning HTML and CSS.
+                                With the knowledge of HTML and CSS it becomes much more easier to even do google
+                                searches when I struggle to find certain functionality on MS Word.
+                            </p>
+                            <p class="slide-element"> 
+                                The largest data I ever worked with in excel had 17 300 rows and 50 plus columns.
+                                This was a 30 minute interval data of power consumption in one of the University of 
+                                Free State campus, throughout the year of 2019. I enjoyed using pivot table.
+                            </p>
+                            <p class="slide-element"> 
+                                As an engineering students I always had presentation to do every month. Thus,
+                                it was mandatory for us to use MS Powerpoint for the presentations. What I found 
+                                amusing in powerpoint was the animation and transition of the slides.
+                            </p>
+
+                            <div class="slide-nav txt-center">
+                                <button class="btn-control btn-prev-slide" data-slide-selector="#cl .slide-container"><i class="fa fa-caret-left"></i></button>
+                                <button class="btn-control btn-pause-slide" data-slide-selector="#cl .slide-container"><i class="fa fa-pause-circle"></i></button>
+                                <button class="btn-control btn-next-slide" data-slide-selector="#cl .slide-container"><i class="fa fa-caret-right"></i></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div id="wd">
+                <h2>Web development</h2>
+                <p class="intro-paragraph">
+                    I started learning web development in 2019 during my spare time and holidays. My current projects are available 
+                    in the project section with their GitHub links.
+                </p>
+                <div class="row">
+                    <div class="column">
+                        <h3>Experience Summary</h3>
+                        <ul>
+                            <li>
+                                Front-end
+                                <ul>
+                                    <li>Html</li>
+                                    <li>Css
+                                        <ul>
+                                            <li>plain css</li>
+                                            <li>sass</li>
+                                            <li>responsive web design</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        JSON
+                                    </li>
+                                    <li>Javascript
+                                        <ul>
+                                            <li>Vanilla Javascript</li>
+                                            <li>Asynchronous Javascript</li>
+                                            <li>Webpack</li>
+                                            <li>Ajax 
+                                                <ul>
+                                                    <li>Fetch API</li>
+                                                    <li>XMLHttpRequest</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>           
+                            <li>Back-end 
+                                <ul>
+                                    <li>C#</li>
+                                    <li>UML Diagrams</li>
+                                    <li>Asp.net Core MVC</li>
+                                    <li>EF Core</li>
+                                    <li>SQL</li>
+                                    <li>Azure App Service</li>
+                                </ul>
+                            </li>  
+                        </ul>
+                    </div>
+                    <div class="column">     
+                        <h3>Experience</h3>
+                        <div class = "slide-container">
+                            <div class="slide-progress">
+                                <div class="progress-bars-h">
+                                    <div class="progress-column">
+                                        <div class="progress-container">
+                                            <span class="progress progress-anim"></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress-column">
+                                        <div class="progress-container">
+                                            <span class="progress"></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress-column">
+                                        <div class="progress-container">
+                                            <span class="progress"></span>
+                                        </div>
+                                    </div>
+                                    <div class="progress-column">
+                                        <div class="progress-container">
+                                            <span class="progress"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="slide-element" style="margin-left: 0%;">
+                                <b>How I knew HTML and CSS?</b>
+                                <br>
+                                When I got enrolled for a c# beginner course in 2019, I felt the need of learning web development just
+                                after the introduction. I started by just watchinsg YouTube videos about HTML and CSS. After 
+                                watching the videos for a long time, I felt ready to start installing everything and begin writing my
+                                own projects. Doing the installation was a serious challenge, but eventually managed. My first projects
+                                was just google, copy, paste, test, change few lines and test. As time went on I was now able to memorize
+                                the html tags and css styles functionaities. 
+                            </p>
+                            <p class="slide-element">
+                                <b>How I knew Javascript?</b>
+                                I use to hear a lot about javascript when I watch HTML and CSS videos. At that time I use to think
+                                that javascript is Java but I was absolutely wrong. What attracted me to javascript was hearing
+                                about the interative features you can add on the web using it. I learnt how to use javascript in SoloLearn
+                                and w3school.com websites. With enough practise I started learning javascript DOM to create interative 
+                                HTML features such as button. 
+                            </P>
+                            <p class="slide-element">
+                                <b>How I knew about databases?</b>
+                                <br>
+                                In my second year I had computer data structures and algorithms course as one of my major. While I was busy with this course
+                                I accidentally found out about databases in a YouTube video. When I saw the thumbnail, seemingly it was something interesting
+                                and a must to know to be successful with web development. At that time I had no idea nor undestand how databases work or get integrated 
+                                with programming languages. But I decided to go along and install Microft SQL Server Management studio to starts practising SQL syntax. 
+                            </p>
+                            <p class="slide-element">
+                                <b>Why I chose Asp.net core MVC framework?</b>
+                                <br>
+                                When I was in my final year of study in 2021, I already had too much knowledge of front-end web development.
+                                The only thing I needed was to start learning the Back-end side, fortunately I already had a c# programming course.
+                                Therefore, after writing my last exam I jumped straight to Udemy and purchased Asp.net Core MVC course and started
+                                learning immediately. With the help of the Microsoft Asp.net core documentation it became much more easier 
+                                to learn the framework.
+                            </p>
+                            <div class="slide-nav">
+                                <div class="btn-pagination-group">
+                                    <button class="btn-prev-slide" data-slide-selector="#wd .slide-container"><i class="fa fa-caret-left"></i>&nbsp;Back</button>&nbsp;
+                                    <button class="btn-next-slide" data-slide-selector="#wd .slide-container">Next&nbsp;<i class="fa fa-caret-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>  
+                </div>
+            </div>
+            <div id="pjm"> 
+                <h2>Project Management</h2>
+                <p class="intro-paragraph">
+                    As an engineering student, I always had a pile of projects to complete 
+                    with different groups, therefore, it was compulsory to follow a specific
+                    project management style to be able to manage the work. The main challenge
+                    with project management was the management itself, it was never easy to keep up
+                    with the work schedule but we eventually managed.
+                </p>
+                <div class="row">
+                    <div class="column">
+                        <h3>Experience Summary</h3>
+                        <ul>
+                            <li>Project proporsal</li>
+                            <li>Main Project</li>
+                            <li>Presentation</li>
+                            <li>Final Report</li>
+                        </ul>
+                    </div>
+                    <div class="column">   
+                        <h3>Experience</h3>
+                        <div class="slide-container">
+                            <p class="slide-element" style="margin-left: 0%;">
+                                The most valuable lesson I learnt in project management is the value of time.
+                                At the beginning you might get tempted into thinking that you will have
+                                enough time to complete the project and procrastinate. The only thing 
+                                that procrastination does, is to make your work a pile that you will have to complete 
+                                in less time under pressure. This will not only result to burn out but to complete failure 
+                                of the project.
+                            </p>
+                            <p class="slide-element">
+                                When working with groups, fairly distribution of the work is mandatory.
+                                Failure to do so will result in mismanagement of the projet which will
+                                lead to lagging in some portion of the project. This process can only 
+                                be accomplished by choosing a strong group leader. 
+                            </p>
+                            <p class="slide-element">
+                                One of the prominent tool I learnt in project management is a Gantt Chart.
+                                This tool makes it easier to manage your time and also track your progress.
+                                Using it has help me in making sure that I complete all my projects on time.
+                            </p> 
+                            <div class="slide-progress">
+                                <div class="progress-circles">
+                                    <div class="progress-container">
+                                        <span class="progress progress-anim height"></span>
+                                    </div>
+                                    <div class="progress-container">
+                                        <span class="progress height"></span>
+                                    </div>
+                                    <div class="progress-container">
+                                        <span class="progress height"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide-nav">
+                                <button class="btn-control btn-prev-slide btn-bottom-left" data-slide-selector="#pjm .slide-container"><i class="fa fa-caret-left"></i></button>
+                                <button class="btn-control btn-next-slide btn-bottom-right" data-slide-selector="#pjm .slide-container"><i class="fa fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="report">
+                <h2>Writing Report</h2>
+                <p class="intro-paragraph">
+                    I wrote a lot of reports in my final year. I always had atleast 1 reports 
+                    every month to complete. Writing reports was the most irritating thing to do 
+                    at the beginning, but I eventually taught myself to love them.
+                </p>
+                <div class="row">
+                    <div class="column">
+                        <h3>Experience Summary</h3>
+                        <ul>
+                            <li>Research</li>
+                            <li>Data Collection</li>
+                            <li>Logbook</li>
+                            <li>Report</li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <h3>Experience</h3>
+                        <div class="slide-container">
+                            <p class="slide-element" style="margin-left: 0%;">
+                                The most interesting reports I ever wrote were for my electronic modules.
+                                We use to compare two or more eletronic devices that has the same functionaities, but manufactured by different companies.
+                                The aim of these reports was to find the best perfoming device in the list. This 
+                                was done by collecting enough data about the components of the devices and compare
+                                them. For instance, we will compare two or more smartphones that are competing in the current year
+                                to find the best option.
+
+                            </p>
+                            <p class="slide-element">
+                                In physics we use to write logbooks first before finalizing the reports.
+                                The logbooks were used for collection data in the labs, it had full 
+                                explanation of how an experiment was conducted and all the oberved data.
+                                The reports were a summary of what was in the logbooks. These reports used 
+                                be interesting if you clearly undestand the theory behind the experiment you are conducting.
+                            </p>
+                            <p class="slide-element">
+                                We also use to write report after completing a certain projects or workshop.
+                                If it was a project, we would write about the challenges we faced while 
+                                working on projects, and what should be done in future to improve the projects. 
+                                As for workshops, we used to write a brief reports about our experience at the
+                                workshop.
+                            </p>
+                            <div class="slide-nav txt-center">
+                                <button class="btn-control btn-prev-slide" data-slide-selector="#pjm .slide-container"><i class="fa fa-caret-left"></i></button>
+                                <span class="page-number">1</span>&nbsp;of&nbsp;<span>3</span>
+                                <button class="btn-control btn-next-slide" data-slide-selector="#pjm .slide-container"><i class="fa fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div> 
+     
+        <div class="projects-section">
+            <h1 id="projects">Projects</h1>
+            <p class="intro-paragraph">
+                This section contains my biggest projects that I have been busy with in the past months.
+                The code is available in GitHub for downloads in this link <a href="#">Chekich-fx project</a>.
+            </p>
+            <h2 id="#ol"><span class="number">1</span> 
+                    Chekich-fx Online Store
+            </h2>
+            <p class="intro-paragraph">
+                The aim of this project was to build an Ecommerse website that only focuses on selling shoes.
+                The projects uses Asp.net core MVC framework for server side programming. I only launched this 
+                project once on azure for testing. The project worked well on the launch, the only thing that I had 
+                to do was to adjust the responsiveness.
+            </p>
+            <div class="pj-container" id="pj-chekich">      
+                <h3 class="txt-center">Desktop View</h3>
+                <div class="pj-view">
+                    <div class="pj-des-view">
+                        <div class="slide-container">
+                            <div class="slide-element" style="margin-left: 0%;">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-1.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-2.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-3.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-4.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-5.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-6.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-7.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-8.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-9.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-10.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-lg-11.png" alt="">  
+                                </div>
+                            </div> 
+                            <button class="btn-center-left btn-prev-slide"  data-slide-selector="#pj-chekich .pj-des-view .slide-container">
+                            <i class="fa fa-caret-left"></i></button>
+                            <button class="btn-center-right btn-next-slide" data-slide-selector="#pj-chekich .pj-des-view .slide-container"><i class="fa fa-caret-right"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="txt-center">Mobile View</h3>
+                    <div class="pj-mob-view">
+                        <div class="slide-container">
+                            <div class="slide-element" style="margin-left: 0%;">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-1.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-2.png" alt=""> 
+                                </div> 
+                            </div>  
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-3.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-4.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-5.png" alt="">  
+                                </div>
+                            </div>  
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-6.png" alt="">  
+                                </div>
+                            </div>  
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-7.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-8.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-9.png" alt="">  
+                                </div>
+                            </div>  
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-10.png" alt="">  
+                                </div>
+                            </div> 
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Store/store-11.png" alt="">  
+                                </div>
+                            </div> 
+                            <button class="btn-center-left btn-prev-slide" data-slide-selector="#pj-chekich .pj-mob-view .slide-container">
+                            <i class="fa fa-caret-left"></i></button>
+                            <button class="btn-center-right btn-next-slide" data-slide-selector="#pj-chekich .pj-mob-view .slide-container">
+                            <i class="fa fa-caret-right"></i></button>
+                        </div>     
+                    </div>    
+                </div>
+            </div>
+            <hr>
+            <h2 id="ca"><span class="number">2</span> Chatting App</h2>
+            <p class="intro-paragraph">
+                This chatting app was specifically built for the clients to easy communicate with the vendor.
+                When creating this app I used SignalR to send the  chat and Ajax to save them to a database. 
+                The app save the chats just in case the vendor or clients accidentally
+                disconnect, thus, the clients or vendor would not have to worry about retyping everything. 
+            </p>
+            <div class="pj-container" id="pj-chat">      
+                <div class="pj-view">
+                    <h3 class="txt-center">Desktop View</h3>
+                    <div class="pj-des-view">
+                        <div class="slide-container">
+                            <div class="slide-element" style="margin-left: 0%;">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-lg-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-lg-2.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-lg-3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-lg-4.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-lg-5.png" alt="">
+                                </div>
+                            </div>
+                            <div class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-lg-6.png" alt="">
+                                </div>
+                            </div>
+                            <button class="btn-center-left btn-prev-slide" data-slide-selector="#pj-chat .pj-des-view .slide-container">
+                                <i class="fa fa-caret-left"></i></button>
+                            <button class="btn-center-right btn-next-slide" data-slide-selector="#pj-chat .pj-des-view .slide-container"><i class="fa fa-caret-right"></i></button>
+                        </div>
+                    </div>
+                    <h3 class="txt-center">Mobile View</h3>
+                    <div class="pj-mob-view">
+                        <div class="slide-container">
+                            <div class="slide-element" style="margin-left: 0;">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-1.png" alt="">  
+                                </div>
+                            </div> 
+                            <div  class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-2.png" alt=""> 
+                                </div> 
+                            </div>  
+                            <div  class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-3.png" alt=""> 
+                                </div> 
+                            </div>  
+                            <div  class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-4.png" alt=""> 
+                                </div> 
+                            </div>  
+                            <div  class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-5.png" alt=""> 
+                                </div> 
+                            </div>  
+                            <div  class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-6.png" alt=""> 
+                                </div> 
+                            </div>  
+                            <div  class="slide-element">
+                                <div>
+                                    <img src="../src/Images/Project/Chat/chat-7.png" alt=""> 
+                                </div> 
+                            </div>  
+                            <button class="btn-center-left btn-prev-slide" data-slide-selector="#pj-chat .pj-mob-view .slide-container"><i class="fa fa-caret-left"></i></button>
+                            <button class="btn-center-right btn-next-slide" data-slide-selector="#pj-chat .pj-mob-view .slide-container"><i class="fa fa-caret-right"></i></button>
+                        </div>
+                    </div>             
+                </div>
+            </div>
+        </div> 
+        <footer>
+            <div class="the-end">
+                <div class="head-rounded">
+                    <span class="eye-1">
+                        <span class="pupil"></span>
+                        <span class="eyelid"></span>
+                    </span>
+                    <span class="tear-1"></span>
+                    <span class="eye-2">
+                        <span class="pupil"></span>
+                        <span class="eyelid"></span>
+                    </span>
+                    <span class="tear-2"></span>
+                </div>
+                <p>
+                    Thank you for making it to the end of SiyaWeb. 
+                    <br>
+                    <i class="fa fa-handshake"></i>
+                </p>   
+                <di>
+                    <div>Email: siyabongahenry23@gmail.com</div>
+                    <div>Call: +27 66 411 8179</div>
+                </div>  
+            </div>
+            <div class="txt-center">
+               <b>&copy; 2021 - SiyaWeb - <a href="">Privacy</a></b>
+            </div>
+        </footer>                       
+    </div>
+</body>
+</html> 

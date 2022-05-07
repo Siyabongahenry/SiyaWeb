@@ -1,0 +1,249 @@
+$theme-color:rgb(13, 10, 54);
+$theme-color-2:#3904f8;
+*{
+    box-sizing:border-box;
+}
+h1,h2,h3,h4{
+    text-align:center;
+    background-color:$theme-color;
+    border-radius:25px;
+    font-weight: bold;
+    padding:1%;
+    color: white;
+    text-align:center;
+
+}
+
+.txt-yellow{
+    color:yellow;
+}
+.txt-center{
+    text-align:center;
+}
+.txt-left{
+    text-align:left;
+}
+.txt-right{
+    text-align: right;
+}
+.txt-white{
+    color:white;
+}
+.txt-red{
+    color: red;
+}
+.txt-black{
+    color:black;
+}
+.txt-green{
+    color:green;
+}
+.d-inline-b{
+    display:inline-block;
+}
+.f-900{
+    font-weight:900;
+}
+.content-view-btn{
+    background-color:$theme-color;
+    color:white;
+    border:0;
+    &:hover{
+        background-color:whitesmoke;
+        color: black;
+    }
+}
+.hidden-content{
+    height:0px;
+    overflow:hidden;
+}
+.message-box{
+    background-color:$theme-color;
+    display:inline-block;
+    color: white;
+    margin-top:5px;
+    width:80%;
+    margin-left:5%;
+    line-height:20px;
+    padding:1em;
+    position:relative;
+    text-align: left;
+}
+.message-box::before{
+    content:"";
+    position:absolute;
+    top:0px;
+    left:-10px;
+    width:0;
+    height:0;
+    border-top:5px solid $theme-color;
+    border-bottom:5px solid transparent;
+    border-left:5px solid transparent;
+    border-right:5px solid $theme-color;
+}
+.number{
+    display:inline-block;
+    width:30px;
+    height: 30px;
+    border-radius:50%;
+    line-height:30px;
+    font-size:1em;
+    color: white;
+    background-color:black;
+    text-align:center;
+}
+/*Rows*/
+.row{
+    overflow-y: auto;
+    overflow-x: hidden;
+    > .column{
+        overflow: hidden;
+        width: 100%;
+    }
+}
+
+/*slide container*/
+.slide-container{
+    overflow-x: hidden;
+    position:relative;
+    white-space: nowrap;
+    .slide-element{
+        display: inline-block;
+        white-space: initial;
+        overflow-x:hidden;
+        width:100%;
+        overflow-y: auto;
+        margin-left:-4px;
+    }
+    .slide-progress{
+        overflow: auto;
+        /*progress bar*/
+        .progress-container{
+            border:1px solid silver;
+            overflow: hidden;
+            .progress{
+                display: block;
+                background-color: $theme-color;
+                height: 100%;
+            }
+        }
+        /*progress with horizontal bars on top*/
+        .progress-bars-h{
+            display:flex;
+            flex-direction:row; 
+            width:100%;   
+            .progress-column{
+                display:block;
+                width:33.33%;
+                height: 4px;
+                padding-right: 2px;
+                &:last-child{
+                    padding-right:0;
+                }
+                .progress-container{
+                    height: inherit;
+                    display: block;
+                    .progress{
+                        height: inherit;
+                        width:0;
+                    }
+                }
+            }
+        }
+        .progress-circles{
+            text-align: center;
+            overflow: auto;
+            .progress-container{
+                display:inline-block;
+                height: 15px;
+                width:15px;
+                border-radius:50%;
+                .progress{
+                    height: 0;
+                }
+            }
+        }
+    }
+    .slide-nav{
+        overflow: auto;
+        height:2rem;
+        line-height: 2rem;
+        overflow: auto;
+        button{
+            background-color: $theme-color;
+            color:white;
+            border:none;
+            font-size: 1rem;
+            &:focus{
+                outline: none;
+            }
+            &:hover{
+                font-size:1.125rem;
+            }
+        }
+        .btn-control{
+            background-color: transparent;
+            color:$theme-color;
+           
+        }
+       
+        .btn-pagination-group{
+            float: right;
+            white-space: initial;
+            .btn{
+                display: inline-block;
+            }
+        }
+    }
+    .btn-bottom-left{
+        float:left;
+    }
+    .btn-bottom-right{
+        float:right;
+    }
+    .btn-center-left,.btn-center-right{
+        border:0;
+        font-size:2em;
+        position:absolute;
+        background-color: $theme-color;
+        color:white;
+        top:50%;
+        &:hover{
+            color:yellow;
+            outline:none;
+        }
+    }
+    .btn-center-left{
+        left:2%;
+    }
+    .btn-center-right{
+        right:2%;
+    }
+}
+/*Desktop*/
+@media only screen and (min-width:992px) {
+    h1{
+        font-size:1.5em;
+    }
+    h2{
+        font-size:1.25em;
+    }
+    h3{
+        font-size:1em;
+    }
+    h1,h2,h3{
+        font-weight:900;
+    }
+    .for-mobile{
+        display:none !important;
+    }
+    /*Rows*/
+    .row{
+        > div{
+            &:first-child,&:last-child{
+                width:50%;
+                float:left;
+            }
+        }
+    }
+}

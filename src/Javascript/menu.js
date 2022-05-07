@@ -1,5 +1,6 @@
 //Expansion of side menu
-document.getElementById("btn-side-menu").addEventListener("click",function(){
+var sideMenuBtn = document.getElementById("btn-side-menu");
+sideMenuBtn.addEventListener("click",function(){
 	resizeMenu(this,this.getAttribute("data-menu-id"));
 });
 function resizeMenu(btn,menuId){
@@ -12,6 +13,16 @@ function resizeMenu(btn,menuId){
 	else{
 		menu.classList.add("side-menu-ml");
 		btn.innerHTML="<i class='fa fa-bars'></i>";
+	}
+}
+//Close Menu On When a Link Is Clicked
+closeOnLinkClick();
+function closeOnLinkClick(){
+	var links = document.querySelectorAll(".side-menu a");
+	for(let i=0;i<links.length;i++){
+		links[i].addEventListener("click",function(){
+			resizeMenu(sideMenuBtn,sideMenuBtn.getAttribute("data-menu-id"));
+		});
 	}
 }
 //Contact menu view

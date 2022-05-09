@@ -1,4 +1,4 @@
-let simpExValues=[[],[],[],[]];
+let simpExValues=[[],[],[],[],[],[],[],[],[],[]];
 let simpExInput = document.querySelectorAll(".simp-excel .input");
 let columnLength = document.querySelectorAll(".simp-excel table tr th").length-1;
 addEventToInputs();

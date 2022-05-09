@@ -38,6 +38,9 @@ h1,h2,h3,h4{
 .txt-green{
     color:green;
 }
+.txt-theme{
+    color:$theme-color;
+}
 .d-inline-b{
     display:inline-block;
 }
@@ -62,8 +65,8 @@ h1,h2,h3,h4{
     display:inline-block;
     color: white;
     margin-top:5px;
-    width:80%;
-    margin-left:5%;
+    width:100%;
+    margin-left:10px;
     line-height:20px;
     padding:1em;
     position:relative;
@@ -166,7 +169,7 @@ h1,h2,h3,h4{
     }
     .slide-nav{
         overflow: auto;
-        height:2rem;
+        height:3rem;
         line-height: 2rem;
         overflow: auto;
         button{
@@ -178,13 +181,16 @@ h1,h2,h3,h4{
                 outline: none;
             }
             &:hover{
-                font-size:1.125rem;
+                font-size:22px;
             }
         }
         .btn-control{
             background-color: transparent;
             color:$theme-color;
-           
+            font-size:18px;
+            height:40px;
+            width:40px;
+            line-height:40px;
         }
        
         .btn-pagination-group{
@@ -218,6 +224,46 @@ h1,h2,h3,h4{
     }
     .btn-center-right{
         right:2%;
+    }
+}
+/*Typing Alert*/
+.typing-alert{
+    height:40px;
+    padding: 8px;
+    overflow:hidden;
+    > span{
+        display: inline-block;
+        border-radius:50%;
+        background-color: $theme-color;
+        &:first-child{
+            height:8px;
+            width: 8px;
+        }
+        &:nth-child(2){
+            height:24px;
+            width: 24px;
+            background-color:$theme-color-2;
+        }
+        &:last-child{
+            height:16px;
+            width: 16px;
+        }
+    }
+    
+}
+.typing-alert-anim{
+    > span{
+        &:first-child{
+            animation: typing-alert 0.8s linear infinite alternate;
+        }
+        &:nth-child(2){
+            animation: typing-alert 0.8s linear infinite alternate;
+            animation-delay:0.4s;
+        }
+        &:last-child{
+            animation: typing-alert 0.8s linear infinite alternate;
+            animation-delay:0.8s;
+        }
     }
 }
 /*Desktop*/

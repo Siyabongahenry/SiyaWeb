@@ -1,6 +1,6 @@
 import "./menu";
 import "./slide";
-
+import "./simp-excel";
 /*Print welcome message*/
 const welcomeText = "Hi, welcome to Siyaweb. You came at the right place to know about me. Feel free to use the navigation on the left hand side."+ 
 "\n\nThank you have a great journey.";

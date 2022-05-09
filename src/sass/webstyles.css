@@ -74,8 +74,8 @@ h1, h2, h3, h4 {
   display: inline-block;
   color: white;
   margin-top: 5px;
-  width: 80%;
-  margin-left: 5%;
+  width: 100%;
+  margin-left: 10px;
   line-height: 20px;
   padding: 1em;
   position: relative;
@@ -201,7 +201,7 @@ h1, h2, h3, h4 {
 
 .slide-container .slide-nav {
   overflow: auto;
-  height: 2rem;
+  height: 3rem;
   line-height: 2rem;
   overflow: auto;
 }
@@ -218,12 +218,16 @@ h1, h2, h3, h4 {
 }
 
 .slide-container .slide-nav button:hover {
-  font-size: 1.125rem;
+  font-size: 22px;
 }
 
 .slide-container .slide-nav .btn-control {
   background-color: transparent;
   color: #0d0a36;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
 }
 
 .slide-container .slide-nav .btn-pagination-group {
@@ -263,6 +267,54 @@ h1, h2, h3, h4 {
 
 .slide-container .btn-center-right {
   right: 2%;
+}
+
+/*Typing Alert*/
+.typing-alert {
+  height: 40px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.typing-alert > span {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #0d0a36;
+}
+
+.typing-alert > span:first-child {
+  height: 8px;
+  width: 8px;
+}
+
+.typing-alert > span:nth-child(2) {
+  height: 24px;
+  width: 24px;
+  background-color: #3904f8;
+}
+
+.typing-alert > span:last-child {
+  height: 16px;
+  width: 16px;
+}
+
+.typing-alert-anim > span:first-child {
+  -webkit-animation: typing-alert 0.8s linear infinite alternate;
+          animation: typing-alert 0.8s linear infinite alternate;
+}
+
+.typing-alert-anim > span:nth-child(2) {
+  -webkit-animation: typing-alert 0.8s linear infinite alternate;
+          animation: typing-alert 0.8s linear infinite alternate;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.typing-alert-anim > span:last-child {
+  -webkit-animation: typing-alert 0.8s linear infinite alternate;
+          animation: typing-alert 0.8s linear infinite alternate;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 /*Desktop*/
@@ -388,7 +440,7 @@ nav .top-menu #contact {
   overflow: hidden;
   border: 2px solid silver;
   border-radius: 10px;
-  color: #3904f8;
+  color: ghostwhite;
 }
 
 nav .top-menu #contact li {
@@ -438,8 +490,8 @@ nav .side-menu {
   overflow-y: auto;
   -webkit-box-shadow: 2px 2px 2px #f3f3f3;
           box-shadow: 2px 2px 2px #f3f3f3;
-  -webkit-transition: margin 0.5s;
-  transition: margin 0.5s;
+  -webkit-transition: margin 0.8s;
+  transition: margin 0.8s;
   overflow-x: hidden;
   width: 100%;
 }
@@ -477,52 +529,6 @@ nav .side-menu-ml {
   margin-top: 30px;
 }
 
-.container .typing-alert {
-  height: 24px;
-  overflow: hidden;
-}
-
-.container .typing-alert > span {
-  display: inline-block;
-  border-radius: 50%;
-  background-color: #0d0a36;
-}
-
-.container .typing-alert > span:first-child {
-  height: 8px;
-  width: 8px;
-}
-
-.container .typing-alert > span:nth-child(2) {
-  height: 24px;
-  width: 24px;
-  background-color: #3904f8;
-}
-
-.container .typing-alert > span:last-child {
-  height: 16px;
-  width: 16px;
-}
-
-.container .typing-alert-anim > span:first-child {
-  -webkit-animation: typing-alert 0.8s linear infinite alternate;
-          animation: typing-alert 0.8s linear infinite alternate;
-}
-
-.container .typing-alert-anim > span:nth-child(2) {
-  -webkit-animation: typing-alert 0.8s linear infinite alternate;
-          animation: typing-alert 0.8s linear infinite alternate;
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.container .typing-alert-anim > span:last-child {
-  -webkit-animation: typing-alert 0.8s linear infinite alternate;
-          animation: typing-alert 0.8s linear infinite alternate;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
 .container > div {
   -webkit-box-shadow: -2px -2px 4px #f3f3f3,2px 2px 4px #f3f3f3;
           box-shadow: -2px -2px 4px #f3f3f3,2px 2px 4px #f3f3f3;
@@ -539,31 +545,25 @@ nav .side-menu-ml {
 .container .about-section .image-container {
   overflow: hidden;
   position: relative;
+  -webkit-box-shadow: 2px 2px 2px,1px 1px 1px;
+          box-shadow: 2px 2px 2px,1px 1px 1px;
 }
 
 .container .about-section .image-container img {
-  max-width: 150px;
-  -webkit-box-shadow: 4px 4px 4px silver;
-          box-shadow: 4px 4px 4px silver;
+  max-width: 200px;
+  -webkit-box-shadow: 4px 4px 4px whitesmoke;
+          box-shadow: 4px 4px 4px whitesmoke;
+  border-radius: 25px;
 }
 
 .container .about-section .image-container .name {
-  position: absolute;
-  bottom: 1%;
   text-align: center;
-  width: 100%;
-  padding: 1%;
+  padding: 2%;
+  background-color: #f3f3f3;
   color: black;
 }
 
-.container .about-section .image-container .name > div {
-  width: 150px;
-  display: inline-block;
-  background-color: #f3f3f3;
-  border: 1px solid silver;
-}
-
-.container .about-section .image-container .name > div > span {
+.container .about-section .image-container .name span {
   color: #3904f8;
 }
 
@@ -591,61 +591,71 @@ nav .side-menu-ml {
   height: 140px;
 }
 
-.container .skills-section #cl .my-excel {
+.container .skills-section #cl .simp-excel {
   width: 100%;
   text-align: center;
 }
 
-.container .skills-section #cl .my-excel table, .container .skills-section #cl .my-excel th, .container .skills-section #cl .my-excel td {
+.container .skills-section #cl .simp-excel table, .container .skills-section #cl .simp-excel th, .container .skills-section #cl .simp-excel td {
   border: 1px solid #0d0a36;
   border-collapse: collapse;
-  overflow: hidden;
 }
 
-.container .skills-section #cl .my-excel table {
+.container .skills-section #cl .simp-excel table {
   display: inline-block;
 }
 
-.container .skills-section #cl .my-excel table th {
+.container .skills-section #cl .simp-excel table th {
   text-align: center;
 }
 
-.container .skills-section #cl .my-excel table tr:first-child {
+.container .skills-section #cl .simp-excel table tr:first-child {
   background-color: aliceblue;
   text-align: center;
 }
 
-.container .skills-section #cl .my-excel table td, .container .skills-section #cl .my-excel table th {
+.container .skills-section #cl .simp-excel table td, .container .skills-section #cl .simp-excel table th {
   height: 20px;
   line-height: 20px;
   width: 150px;
 }
 
-.container .skills-section #cl .my-excel table td:first-child, .container .skills-section #cl .my-excel table th:first-child {
+.container .skills-section #cl .simp-excel table td:first-child, .container .skills-section #cl .simp-excel table th:first-child {
   width: 30px;
   background-color: aliceblue;
 }
 
-.container .skills-section #cl .my-excel table td span, .container .skills-section #cl .my-excel table th span {
+.container .skills-section #cl .simp-excel table td .input, .container .skills-section #cl .simp-excel table th .input {
   display: block;
   height: 100%;
   padding: 2px;
+  text-align: center;
 }
 
-.container .skills-section #cl .my-excel table td span:hover, .container .skills-section #cl .my-excel table th span:hover {
+.container .skills-section #cl .simp-excel table td .input:hover, .container .skills-section #cl .simp-excel table th .input:hover {
   border: 1px solid #3904f8;
 }
 
-.container .skills-section #cl .my-excel table td span:focus, .container .skills-section #cl .my-excel table th span:focus {
+.container .skills-section #cl .simp-excel table td .input:focus, .container .skills-section #cl .simp-excel table th .input:focus {
   outline: none;
-}
-
-.container .skills-section #cl .my-excel table td {
   text-align: left;
 }
 
-.container .skills-section #cl .my-excel table td:first-child {
+.container .skills-section #cl .simp-excel table td {
+  text-align: left;
+  position: relative;
+}
+
+.container .skills-section #cl .simp-excel table td:first-child {
   text-align: center;
+}
+
+.container .skills-section #cl .simp-excel table td .formula {
+  top: 100%;
+  left: 0%;
+  width: 100%;
+  position: absolute;
+  color: white;
 }
 
 .container .skills-section #wd .slide-container .slide-element {
@@ -846,12 +856,10 @@ nav .side-menu-ml {
 
 @-webkit-keyframes phoneAlert {
   0% {
-    color: #0d0a36;
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
   }
   100% {
-    color: #3904f8;
     -webkit-transform: rotateZ(60deg);
             transform: rotateZ(60deg);
   }
@@ -859,12 +867,10 @@ nav .side-menu-ml {
 
 @keyframes phoneAlert {
   0% {
-    color: #0d0a36;
     -webkit-transform: rotateZ(0deg);
             transform: rotateZ(0deg);
   }
   100% {
-    color: #3904f8;
     -webkit-transform: rotateZ(60deg);
             transform: rotateZ(60deg);
   }

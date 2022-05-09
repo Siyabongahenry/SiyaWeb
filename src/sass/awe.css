@@ -74,8 +74,8 @@ h1, h2, h3, h4 {
   display: inline-block;
   color: white;
   margin-top: 5px;
-  width: 80%;
-  margin-left: 5%;
+  width: 100%;
+  margin-left: 10px;
   line-height: 20px;
   padding: 1em;
   position: relative;
@@ -201,7 +201,7 @@ h1, h2, h3, h4 {
 
 .slide-container .slide-nav {
   overflow: auto;
-  height: 2rem;
+  height: 3rem;
   line-height: 2rem;
   overflow: auto;
 }
@@ -218,12 +218,16 @@ h1, h2, h3, h4 {
 }
 
 .slide-container .slide-nav button:hover {
-  font-size: 1.125rem;
+  font-size: 22px;
 }
 
 .slide-container .slide-nav .btn-control {
   background-color: transparent;
   color: #0d0a36;
+  font-size: 18px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
 }
 
 .slide-container .slide-nav .btn-pagination-group {
@@ -263,6 +267,54 @@ h1, h2, h3, h4 {
 
 .slide-container .btn-center-right {
   right: 2%;
+}
+
+/*Typing Alert*/
+.typing-alert {
+  height: 40px;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.typing-alert > span {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #0d0a36;
+}
+
+.typing-alert > span:first-child {
+  height: 8px;
+  width: 8px;
+}
+
+.typing-alert > span:nth-child(2) {
+  height: 24px;
+  width: 24px;
+  background-color: #3904f8;
+}
+
+.typing-alert > span:last-child {
+  height: 16px;
+  width: 16px;
+}
+
+.typing-alert-anim > span:first-child {
+  -webkit-animation: typing-alert 0.8s linear infinite alternate;
+          animation: typing-alert 0.8s linear infinite alternate;
+}
+
+.typing-alert-anim > span:nth-child(2) {
+  -webkit-animation: typing-alert 0.8s linear infinite alternate;
+          animation: typing-alert 0.8s linear infinite alternate;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.typing-alert-anim > span:last-child {
+  -webkit-animation: typing-alert 0.8s linear infinite alternate;
+          animation: typing-alert 0.8s linear infinite alternate;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 /*Desktop*/

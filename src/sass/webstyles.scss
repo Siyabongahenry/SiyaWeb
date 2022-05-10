@@ -194,7 +194,16 @@ nav{
             }  
             
         }
-        
+        #qualification{
+            h4{
+                background-color:white;
+                color:black;
+                margin-top:0;
+            }
+            > div{
+                border-bottom:5px solid $theme-color;
+            }
+        }
 
     }
     .skills-section{
@@ -277,8 +286,8 @@ nav{
                         text-decoration: underline;
                     }
                     div{
-                        background-color:$theme-color-2;
-                        color:white;
+                        background-color:silver;
+                        color:black;
                         margin: 2%;
                         padding: 1%;
                     }
@@ -351,7 +360,7 @@ nav{
               
         }
     }
-    .the-end{
+    footer{
         padding: 2%;
         position:relative;
         background-color:$theme-color;
@@ -427,7 +436,17 @@ nav{
             animation: end-msg 4s linear infinite;
             animation-delay: 5.4s;
         }
-        
+        .footer-contact{
+            > div{
+                font-size:1.25rem;
+                padding-top:2%;
+                a{
+                    color:blue;
+                    text-decoration:none;
+                    font-size:inherit;
+                }
+            }
+        }
     }
 }
 /*Animations*/

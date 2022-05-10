@@ -1,4 +1,4 @@
-let simpExValues=[[],[],[],[],[],[],[],[],[],[]];
+let simpExValues=[[],[],[],[],[],[]];
 let simpExInput = document.querySelectorAll(".simp-excel .input");
 let columnLength = document.querySelectorAll(".simp-excel table tr th").length-1;
 addEventToInputs();
@@ -59,9 +59,9 @@ function restoreColumnStyle(no){
     simpExInput[no].style.fontVariant ="initial";
 }
 function doCalc(input){
-    let sumPattern = /SUM\([A-D]{1}[1-4]{1}:[A-D]{1}[1-4]{1}\)/;
-    let productPattern = /PRODUCT\([A-D]{1}[1-4]{1}:[A-D]{1}[1-4]{1}\)/;
-    let averagePattern = /AVERAGE\([A-D]{1}[1-4]{1}:[A-D]{1}[1-4]{1}\)/;
+    let sumPattern = /SUM\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/;
+    let productPattern = /PROD\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/;
+    let averagePattern = /AVER\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/;
     if(input.search(sumPattern) > 0){
         let values = findNumbers(findColumnsAndRow(input));
         if(values ==undefined || values.length <= 0)   {
@@ -88,15 +88,15 @@ function doCalc(input){
 }
 function findColumnsAndRow(input){
     //find something like A1:C1
-    let rowColumn = input.match(/[A-D]{1}[1-4]{1}:[A-D]{1}[1-4]{1}/);
+    let rowColumn = input.match(/[A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}/);
     if(rowColumn == null){
         return;
     }
     rowColumn = rowColumn.toString();
     //find start coordinate(row,colum) e.g A1 
-    let rowColumnStart = rowColumn.match(/^[A-D]{1}[1-4]{1}/).toString();
+    let rowColumnStart = rowColumn.match(/^[A-C]{1}[1-6]{1}/).toString();
     //find end coordinate(row,colum) e.g C1
-    let rowColumnEnd = rowColumn.match(/[A-D]{1}[1-4]{1}$/).toString();
+    let rowColumnEnd = rowColumn.match(/[A-C]{1}[1-6]{1}$/).toString();
     if(rowColumnStart == null || rowColumnEnd == null){
         return;
     }

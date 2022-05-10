@@ -15,9 +15,6 @@ function writeWelcomeMSG(){
 	if(messageBox.innerText.length != welcomeText.length){
 		setTimeout(writeWelcomeMSG,50);
 	}
-	else{	
-		setTimeout(()=>{messageBox.parentNode.removeChild(messageBox);},1000*600);
-	}
 }
 
 /*hide or show content*/

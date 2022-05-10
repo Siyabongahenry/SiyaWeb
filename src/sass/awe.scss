@@ -13,7 +13,16 @@ h1,h2,h3,h4{
     text-align:center;
 
 }
-
+.git-hub-link{
+    display:inline-block;
+    text-decoration:none;
+    padding:0.5em;
+    color:white;
+    font-weight:bold;
+    background-color:$theme-color-2;
+    border-radius:20px;
+    margin-top:1%;
+}
 .txt-yellow{
     color:yellow;
 }
@@ -117,6 +126,12 @@ h1,h2,h3,h4{
         width:100%;
         overflow-y: auto;
         margin-left:-4px;
+        h4{
+            background-color:white;
+            color:black;
+            margin:0;
+            text-align:left;
+        }
     }
     .slide-progress{
         overflow: auto;

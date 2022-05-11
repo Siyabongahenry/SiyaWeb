@@ -1,4 +1,6 @@
+
 let simpExValues=[[],[],[],[],[],[]];
+//cells input
 let simpExInput = document.querySelectorAll(".simp-excel .input");
 let columnLength = document.querySelectorAll(".simp-excel table tr th").length-1;
 addEventToInputs();
@@ -29,9 +31,10 @@ function addEventToInputs(){
             if(e.keyCode == 13)
             {
                 if(this.innerText.search(/=/i) >=0 ){
-                    if(!isNaN(doCalc(this.innerText)))
+                     let calc = doCalc(this.innerText);
+                    if(!isNaN(calc))
                     {
-                        this.innerText = doCalc(this.innerText);
+                        this.innerText = calc;
                         this.contentEditable =false;
                         this.contentEditable =true;
                         restoreColumnStyle(i);
@@ -41,9 +44,10 @@ function addEventToInputs(){
         });
         simpExInput[i].addEventListener("blur",function(){
             if(this.innerText.search(/=/i) >=0 ){
-                if(!isNaN(doCalc(this.innerText)))
+                let calc = doCalc(this.innerText);
+                if(!isNaN(calc))
                 {
-                    this.innerText = doCalc(this.innerText);
+                    this.innerText = calc;
                     this.contentEditable =false;
                     this.contentEditable =true;
                     restoreColumnStyle(i);
@@ -59,25 +63,25 @@ function restoreColumnStyle(no){
     simpExInput[no].style.fontVariant ="initial";
 }
 function doCalc(input){
-    let sumPattern = /SUM\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/;
-    let productPattern = /PROD\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/;
-    let averagePattern = /AVER\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/;
+    let sumPattern = /SUM\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/i;
+    let productPattern = /PROD\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/i;
+    let averagePattern = /AVER\([A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}\)/i;
     if(input.search(sumPattern) > 0){
-        let values = findNumbers(findColumnsAndRow(input));
+        let values = findNumbers(findCellPos(input));
         if(values ==undefined || values.length <= 0)   {
             return;
         }
         return calcSum(values);
     }
     if(input.search(productPattern) > 0){
-        let values = findNumbers(findColumnsAndRow(input));
+        let values = findNumbers(findCellPos(input));
         if(values ==undefined || values.length <= 0)   {
             return;
         }
         return calcProduct(values);
     }
     if(input.search(averagePattern) > 0){
-        let values = findNumbers(findColumnsAndRow(input));
+        let values = findNumbers(findCellPos(input));
         if(values ==undefined || values.length <= 0)   {
             return;
         }
@@ -86,17 +90,17 @@ function doCalc(input){
    
     return;
 }
-function findColumnsAndRow(input){
-    //find something like A1:C1
-    let rowColumn = input.match(/[A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}/);
+function findCellPos(input){
+    //find references e.g A1:C1
+    let rowColumn = input.match(/[A-C]{1}[1-6]{1}:[A-C]{1}[1-6]{1}/i);
     if(rowColumn == null){
         return;
     }
     rowColumn = rowColumn.toString();
-    //find start coordinate(row,colum) e.g A1 
-    let rowColumnStart = rowColumn.match(/^[A-C]{1}[1-6]{1}/).toString();
-    //find end coordinate(row,colum) e.g C1
-    let rowColumnEnd = rowColumn.match(/[A-C]{1}[1-6]{1}$/).toString();
+    //find start cell coordinate(row,colum) e.g A1 
+    let rowColumnStart = rowColumn.match(/^[A-C]{1}[1-6]{1}/i).toString();
+    //find  end cell coordinate(row,colum) e.g C1
+    let rowColumnEnd = rowColumn.match(/[A-C]{1}[1-6]{1}$/i).toString();
     if(rowColumnStart == null || rowColumnEnd == null){
         return;
     }
@@ -114,6 +118,7 @@ function findColumnsAndRow(input){
 }
 
 function findNumbers(selectedPoints){
+    //numbers in same row
     if(selectedPoints.startRow == selectedPoints.endRow){
         let arr = simpExValues[selectedPoints.startRow].slice(selectedPoints.startColumn,selectedPoints.endColumn+1);
         return arr.map(x=> {
@@ -123,6 +128,7 @@ function findNumbers(selectedPoints){
             return parseFloat(x); 
         }).filter(x => !isNaN(x));
     }
+    //numbers in same column
     if(selectedPoints.startColumn == selectedPoints.endColumn){
         let arr =[];
         for(let i=0;i<simpExValues.length;i++){
@@ -130,13 +136,16 @@ function findNumbers(selectedPoints){
         }
         arr =arr.slice(selectedPoints.startRow,selectedPoints.endRow+1);
         return arr.map(x=> {
+            //check if a cell contain a formula
             if(isNaN(parseFloat(x))){
+                //try to do calculation
                 return doCalc(x);
             }
+            //try to convert cell value to a number
             return parseFloat(x); 
-        }).filter(x => !isNaN(x));
+        }).filter(x => !isNaN(x));//filter out cells that are not numbers
     }
-    
+    //return values in all cells
     let arr = simpExValues.flat().map(x=> {
         if(isNaN(parseFloat(x))){
             return doCalc(x);
@@ -147,6 +156,7 @@ function findNumbers(selectedPoints){
 }
 
 function calcSum(values){
+
     return values.reduce((acc,curr)=>{ return acc + curr; });
 }
 function calcAverage(values){

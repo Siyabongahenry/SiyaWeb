@@ -3,6 +3,9 @@ $theme-color-2:#3904f8;
 *{
     box-sizing:border-box;
 }
+code{
+    color:green;
+}
 h1,h2,h3,h4{
     text-align:center;
     background-color:$theme-color;
@@ -22,6 +25,11 @@ h1,h2,h3,h4{
     background-color:$theme-color-2;
     border-radius:20px;
     margin-top:1%;
+    box-shadow:4px 4px 2px grey;
+    &:hover{
+        box-shadow:none;
+        font-size:1.125em;
+    }
 }
 .txt-yellow{
     color:yellow;

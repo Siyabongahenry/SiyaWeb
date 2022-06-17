@@ -8,670 +8,384 @@
     <header>
         <nav>
             <ul class="top-menu">
-                <li><button id="btn-side-menu" data-menu-id="side-menu"><i class="fa fa-bars"></i></button></li>
-                <li class="logo"><span>Siya</span><span>Web</span></li>
-                <li><a href="#"><i class="fa fa-user"></i></a></li>
-                <li><button id="btn-contact"><i class="fa fa-contact-book"></i><span class="sound-wave"></span></button>  
+                <li><button  id="btn-side-menu" data-menu-id="side-menu" style="position: relative;"><i class="fa fa-bars"></i></button></li>
+                <li class="logo">Portfolio</li>
+                <li><a href="index.html"><i class="fa fa-user"></i></a></li>
+                <li><button id="btn-contact"><i class="fa fa-contact-book" style="position: relative;"></i></button>  
                     <ul id="contact">
                         <li><b>Contact Details</b></li>
-                        <li><i class="fa fa-phone"></i>: <span>+27 66 411 8179</span></li>
-                        <li>Email: <span>siyabongahenry23@gmail.com</span></li>
-                        <li>Alternative: <span>vilakazish23@gmail.com</span></li>
+                        <li><i class="fa fa-phone"></i>&nbsp;<span>+27 66 411 8179</span></li>
+                        <li><i class="fa fa-envelope"></i>&nbsp;<span>siyabongahenry23@gmail.com</span></li>
                     </ul>
                 </li>
             </ul>
             <ul class="side-menu side-menu-ml" id="side-menu">
-                <li class="header">Navigation Panel</li>
-                <li><a href="#about">About S.H Vilakazi</a></li>
+                <li><button class="nav-btn" data-page-id="about-page">About</button></li>
+                <li><button class="nav-btn" data-page-id="about-page">Education</button></li>
                 <li>
-                    <a href="#skills">Skills</a>
-                    <ul>
-                        <li><a href="#cl">Computer Literacy</a></li>
-                        <li><a href="#wd">Web Development</a></li>
-                        <li><a href="#pjm">Project Management</a></li>
-                        <li><a href="#report">Writing Reports</a></li>
+                    <button class="btn-hidden-content" data-content-id="skills-nav">Skills&nbsp;<i class="fa fa-caret-down"></i></button>
+                    <ul class="inside-nav d-none" id="skills-nav">
+                        <li><a class="nav-btn"  data-page-id="computer-lit-page">Computer Literacy</a></li>
+                        <li><a class="nav-btn" data-page-id="computer-prog-page">Computer Programming</a></li>
+                        <li><a class="nav-btn" data-page-id="web-dev-page">Web Development</a></li>
+                        <li><a class="nav-btn" data-page-id="physics-page">Physics</a></li>
+                        <li><a class="nav-btn" data-page-id="maths-page">Mathematics</a></li>
+                        <li><a class="nav-btn" data-page-id="elec-eng-page">Electrical Engineering</a></li>
+                        <li><a class="nav-btn" data-page-id="mech-eng-page">Mechanical Engineering</a></li>
+                        <li><a class="nav-btn" data-page-id="weld-page">Welding</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#projects">Projects</a>
-                    <ul>
-                        <li><a href="#os">Online Store</a></li>
-                        <li><a href="#ca">Chatting App</a></li>
+                    <button  class="btn-hidden-content" data-content-id="project-nav">Projects&nbsp;<i class="fa fa-caret-down"></i> </button>
+                    <ul class="inside-nav d-none" id="project-nav">
+                        <li><a class="nav-btn" data-page-id="pedal-cart-page">Pedal Cart</a></li>
+                        <li><a class="nav-btn" data-page-id="online-store-page">Online Store (Chekich-fx)</a></li>
                     </ul>
                 </li>
             </ul>
         </nav>
     </header>
-    <div class="container">
-        <div class="about-section" id="about">  
-            <h1>About <span>S.H Vilakazi</span></h1>
-            <div class="row">
-                <div>                      
-                    <div class="txt-center"> 
-                        <div class="image-container">         
+    <div class="container-fluid">
+        <div class="page" id="about-page">  
+            <h1>About me</h1>
+            <div class="row">                        
+                <div class="col-sm-12 col-lg-4 text-center"> 
+                    <div>
+                        <div class="profile-image-frame">  
                             <img src="../src/Images/prof_img.jpg" alt="Image not found">
-                            <div class="name">
-                                <div>
-                                    <b>S.H Vilakazi</b>
-                                    <div>
-                                        <i>
-                                            Bsc Physics(Graduate),
-                                            Full Stack Web Developer 
-                                            <span class="d-inline-b">(Part Time)</span>
-                                        </i>
-                                    </div>
-                                </div>
-                            </div>
+                        </div>    
+                        <div class="name">
+                           Siyabonga Vilakazi  <br> <span class="text-black-50">(short: Siya)</span>
                         </div>
-                        
-                        <div onclick="removeElement(this)">
-                            <div class="typing-alert typing-alert-anim">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div id="welcomeMSG"></div> 
+                        <div class="title">
+                            Bsc Physics Graduate/Web developer
                         </div>
-                    </div>     
-                </div>
-                <div>
-                    <div class="intro">              
-                        <h2>Who am I?</h2>
-                        <div>
-                            <p>
-                                My name is Siyabonga Vilakazi. I completed a bachelors of science degree majoring
-                                in physics and engineering subjects in 2021, at the University of the Free State. I currenctly
-                                work as an independent web developer, tutor and home electrician.
-                                <br><br>
-                                As a self taught web developer, I can create any kinds of website from scratch. 
-                                I also own my own platform which I call BtCode for tutoring coding. Most, of my
-                                projects are available on github.
-                                <br><br>
-                                When working as a technician, I normally identify faults in houses that could
-                                be caused by any electrical appliances or installations. I can also fix certain 
-                                electrical appliances. If the fault is not in the house, I can also help in reporting
-                                it to the electrical supplier, which is mostly Eskom in my case.
-                                <br><br>
-                                I am passionate with Electrical Engineering, having had completed the first two years
-                                while studying physics, I am currectly looking for a funder for the year of 2023, to
-                                continue with the last two years. 
-                            </p>
-                            <button class="content-view-btn" data-btn-newText="Career" data-content-id="career">
-                                Career <i class="fa fa-caret-down"></i>
-                            </button> 
-                            <p class="hidden-content" id="career">
-                                    My fascination has always been in engineering. 
-                                    I grew up enjoying seeing what engineers are capable of, thus, 
-                                    it has always been my wish to be in the engineering field.
-                                <br><br>
-                                <a href="#qualification">See my qualifications</a> 
-                            </p>
-                            <button class="content-view-btn" data-btn-newText="Hobbies" data-content-id="hobbies">
-                                Hobbies <i class="fa fa-caret-down"></i>
-                            </button> 
-                            <p class="hidden-content" id="hobbies">
-                                My favourite hobby is web development. The reason I enjoy web development 
-                                is because all the tools that are required are easy accessible and cost free. 
-                                As someone who love coding it becomes much more interesting 
-                                    when I implement my coding knowledge to something I can see. I spend
-                                a tremendous amount of time doing researches about web development, therefore, 
-                                I barely see the existence of holidays. 
-                                <a href="#qualification">You can click here to see my projects</a> 
-                            </p>
-                        </div>
+                    </div> 
+                    <div class="message-box">
+                        Hi, welcome to my portfoloi<i class="fa fa-handshake"></i>.
                     </div>
+                </div>     
+                <div class="col-sm-12 col-lg-8 overflow-hidden">  
+                    <div class="description">
+                        <div class="descript-cover text-center">
+                            <i class="fa fa-star text-black-50"></i>
+                            <i class="fa fa-star text-black-50"></i>
+                            <i class="fa fa-star text-black-50"></i>
+                        </div>         
+                        <p>
+                           I'm friendly and polite. I enjoy reading articles and keeping up with tech news. 
+                           <br><br>
+                           Concurrently, I completed a Bsc Physics degree and BEng Electrical Engineering degree(1<sup>st</sup> and 2<sup>nd</sup>  year) at the University of the Free State.
+                           Having had completed two years of Electrical Engineering, I'm enthusiastic and optimistic to further my studies in this field.
+                           <br><br>
+                           I'm a self-taught web developer. I started learning web development as a hobbie in 2019. My 
+                           aim was to improve my coding skills in a creative and lucrative manner. After months of learning, I realized the revelance and cruciality of this skill in the current state. 
+                           Thus, I kept on doing researches, by doing so I  acquired a tremendous amount of knowledge.
+                           <br><br>
+                           I can create and deploy websites to the cloud from scratch. A  simple example of my website is this portfolio which I made from scratch using Vanilla Javascript,Bootstrap,CSS/SASS and HTML.
+                           <br><br>
+                           I'm available for internships or any jobs that are related to my degree or skills.
+                        </p>
+                    </div>   
                 </div>                  
             </div> 
-        </div> 
-        <div class="skills-section">
-            <h1 id="skills">Skills</h1>
-            <p class="intro-paragraph txt-center"> 
-                This section contains the skills I acquired through higher education and those I taught myself.
-            </p>
-            <div id="cl">
-                <h2>Computer Literacy</h2>
-                <p class="intro-paragraph">
-                    I did computer literacy as a semester course and applied it through out the duration of my studies.
-                </p>
-                <div class="row">
-                    <div class="column">
-                        <h3>Microft Office 2016 (4yrs experience)</h3> 
+        </div>        
+        <div class="page d-none" id="computer-lit-page">
+            <h1>Computer Literacy</h1>   
+            <h2>Microft Office 2016 <span class="badge bg-success">ufs <i class="fa fa-check"></i></span></h2> 
+            <ul class="list-group">
+                <li class="list-group-item">Microft Word </li>
+                <li class="list-group-item">Microft Excel</li>
+                <li class="list-group-item">Microft Powerpoint</li>
+            </ul> 
+            <div class="p-2 m-2">
+                <i class="fa fa-info-circle text-info"></i>
+                 <span class="badge bg-success text-white">ufs&nbsp;<i class="fa fa-check"></i></span>
+                 completed at the <b>University of the Free State</b>
+            </div>
+        </div>
+        <div class="page d-none" id="computer-prog-page">
+            <h1>Computer Programming</h1>
+            <div class="container">
+                <h2>Completed Modules <span class="badge bg-success text-white"><i class="fa fa-check"></i></span></h2>
+                <ul class="list-group">
+                    <li class="list-group-item">C# <span class="badge bg-success float-end">ufs&nbsp;<i class="fa fa-check"></i></span>
                         <ul>
-                            <li>
-                                <img src="/src/Images/MsOffice/word.png" alt="Word Icon">
-                                <br>
-                                MS Word
+                            <li>Object Oriented Programming</li>
+                            <li>UML Diagrams</li>
+                            <li>Computer Data Structures and Algorithms</li>
+                            <li>Advance Programming</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item">VHDL <span class="badge bg-success float-end">ufs&nbsp;<i class="fa fa-check"></i></span></li>
+                    <li class="list-group-item">ARM Assembly <span class="badge bg-success float-end">ufs&nbsp;<i class="fa fa-check"></i></span></li>
+                    <li class="list-group-item">MATLAB <span class="badge bg-success float-end">ufs&nbsp;<i class="fa fa-check"></i></span></li>
+                    <li class="list-group-item">Javacript <span class="badge bg-success float-end">self-taught/w3school/SoloLearn</span>
+                        <ul>
+                            <li>Vanilla Javacript</li>
+                            <li>Javascript DOM</li>
+                            <li>webpack</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="p-2 m-2">
+                <i class="fa fa-info-circle text-info"></i>
+                 <span class="badge bg-success text-white">ufs&nbsp;<i class="fa fa-check"></i></span>
+                 completed at the <b>University of the Free State</b>
+            </div>
+        </div>
+        <div class="page d-none" id="web-dev-page">
+            <h1>Web development <span class="badge float-end bg-white text-primary"><i class="fa fa-chalkboard-teacher"></i></span></h1>
+            <div class="container">
+                <h3>Front End</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">HTML <span class="badge bg-success text-white float-end">self-taught/w3school/SoloLearn</span>
+                    <li class="list-group-item">CSS <span class="badge bg-success text-white float-end">self-taught/w3school/SoloLearn</span>
+                        <ul>
+                            <li>plain css</li>
+                            <li>sass</li>
+                            <li>responsive web design</li>
+                        </ul>
+                    </li>
+                    <li class="list-group-item"> 
+                        JSON
+                        <span class="badge bg-success text-white float-end">self-taught/w3school/SoloLearn</span>
+                    </li>
+                    <li class="list-group-item">Javascript <span class="badge bg-success text-white float-end">self-taught/w3school/SoloLearn</span>
+                        <ul>
+                            <li>Vanilla Javascript</li>
+                            <li>Asynchronous Javascript</li>
+                            <li>Webpack</li>
+                            <li>Ajax 
+                                <ul>
+                                    <li>Fetch API</li>
+                                    <li>XMLHttpRequest</li>
+                                </ul>
                             </li>
-                            <li>
-                                <img src="/src/Images/MsOffice/excel.png" alt="excel Icon">
-                                <br>
-                                MS Excel
-                            </li>
-                            <li>
-                                <img src="/src/Images/MsOffice/powerpoint.png" alt="powerpoint Icon">
-                                <br>
-                                MS Powerpoint
-                            </li>
-                        </ul> 
-                    </div>
-                    <div class="column">  
-                        <h3>Experience</h3>
-                        <div class="slide-container">
-                            <div class="slide-progress">
-                                <div class="progress-bars-h">
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress progress-anim width" style="width:0%;"></span>
-                                        </div>
-                                    </div>
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress width" style="width:0%;"></span>
-                                        </div>
-                                    </div>
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress width" style="width:0%;"></span>
-                                        </div>
-                                    </div>
+                        </ul>
+                    </li>
+                </ul>
+                <h3 class="text-left">Back-end</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">C# <span class="badge bg-success text-white float-end">ufs <i class="fa fa-check"></i></span></li>
+                    <li class="list-group-item">Asp.net Core MVC <span class="badge bg-success text-white float-end">Udemy/Microsoft documentations</span></li>
+                    <li class="list-group-item">EF Core <span class="badge bg-success text-white float-end">Udemy/Microsoft documentations</span></li>
+                    <li class="list-group-item">SQL <span class="badge bg-success text-white float-end">w3school/Microsoft documentations</span></li>
+                    <li class="list-group-item">Azure App Service <span class="badge bg-success text-white float-end">Microsoft documentations</span></li>
+                </ul>
+            </div>  
+            <div class="p-2 m-2">
+                <i class="fa fa-info-circle text-info"></i>
+                 <span class="badge bg-success text-white">ufs&nbsp;<i class="fa fa-check"></i></span>
+                 completed at the <b>University of the Free State</b>
+            </div>  
+        </div>
+        <div class="page d-none" id="physics-page"> 
+            <h1>Physics</h1>  
+            <div class="container">
+                <h2>Completed Modules <span class="badge bg-success text-white float-end">ufs&nbsp;<i class="fa fa-check"></i></span></h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Mechanics</li>
+                    <li class="list-group-item">Electricity <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Optics</li>
+                    <li class="list-group-item">Waves</li>
+                    <li class="list-group-item">Magnetism <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Thermodynamics</li>
+                    <li class="list-group-item">Electronics <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Electromagnetism <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Practicals</li>
+                    <li class="list-group-item">Modern Physics <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Statistical Physics 1</li>
+                </ul>
+            </div>
+            <div class="p-2 m-2">
+                <i class="fa fa-info-circle text-info"></i>
+                 <span class="badge bg-success text-white">ufs&nbsp;<i class="fa fa-check"></i></span>
+                 completed at the <b>University of the Free State</b>
+            </div>
+        </div>
+        <div class="page d-none" id="maths-page"> 
+            <h1>Mathematics</h1>
+            <div class="container">   
+                <h2>Completed Modules <span class="badge bg-success text-white float-end">ufs&nbsp;<i class="fa fa-check"></i></span></h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Calculus</li>
+                    <li class="list-group-item">Algebra and logic <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Vector Analysis</li>
+                    <li class="list-group-item">Sequence and Series <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Scientific Computing</li>
+                    <li class="list-group-item">Ordinary Differential Equations <i class="float-end text-primary fa fa-heart"></i></li>
+                </ul>
+            </div>
+            <div class="p-2 m-2">
+                <i class="fa fa-info-circle text-info"></i>
+                 <span class="badge bg-success text-white">ufs&nbsp;<i class="fa fa-check"></i></span>
+                 completed at the <b>University of the Free State</b>
+            </div> 
+        </div>
+        <div class="page d-none" id="elec-eng-page">
+            <h1>Electrical Engineering</h1>    
+            <div class="container">
+                <h2>Completed Modules <span class="badge bg-success text-white float-end">ufs&nbsp;<i class="fa fa-check"></i></span></h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Computer Programming For Engineers <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Data Structures and Advanced Programming <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Electrotechnique <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Computer Logic <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Microprocessors <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Holistic Engineering Design</li>
+                    <li class="list-group-item">Electrical Power Systems <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Signal Theory <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Engineering Forum</li>
+                    <li class="list-group-item">Vacation work</li>
+                </ul>
+            </div> 
+            <div class="p-2 m-2">
+                <i class="fa fa-info-circle text-info"></i>
+                 <span class="badge bg-success text-white">ufs&nbsp;<i class="fa fa-check"></i></span>
+                 completed at the <b>University of the Free State</b>
+            </div>  
+        </div>
+        <div class="page d-none" id="mech-eng-page">
+            <h1>Mechanica Engineering</h1>
+            <div class="container">
+                <h2>Completed Modules <span class="badge bg-success text-white float-end">ufs&nbsp;<i class="fa fa-check"></i></span></h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Engineering Statics</li>
+                    <li class="list-group-item">Engineering Dynamics 1</li>
+                    <li class="list-group-item">Dynamics of rigid bodies <i class="float-end text-primary fa fa-heart"></i></li>
+                    <li class="list-group-item">Strength of Materials 1</li>
+                    <li class="list-group-item">Engineering Drawings</li>
+                </ul>
+            </div> 
+            <div class="p-2 m-2">
+                <i class="fa fa-info-circle text-info"></i>
+                 <span class="badge bg-success text-white">ufs&nbsp;<i class="fa fa-check"></i></span>
+                 completed at the <b>University of the Free State</b>
+            </div> 
+        </div>
+        <div class="page d-none" id="pedal-cart-page">
+            <h1>Pedal Cart (group)</h1>
+            <div class="row">
+                <div class="col-md-8 p-2">
+                    <div class="text-center">
+                        <div class="d-inline-block">
+                            <div class="d-inline-block p-2">
+                                <img src="/src/Images/Project/Pedal-Cart/pedal-cart-design.jpg" alt="pedal cart design img">
+                                <div>
+                                    <b>AutoCAD Design</b>
                                 </div>
                             </div>
-                            <p class="slide-element" style="margin-left:0%;"> 
-                                Using MS Word became fascinating the day I started learning HTML and CSS.
-                                With the knowledge of HTML and CSS it becomes much more easier to even do google
-                                searches when I struggle to find certain functionality on MS Word.
-                            </p>
-                            <p class="slide-element"> 
-                                The largest data I ever worked with in excel had 17 300 rows and 50 plus columns.
-                                This was a 30 minute interval data of power consumption in one of the University of 
-                                Free State campus, throughout the year of 2019. I enjoyed using pivot table.
-                            </p>
-                            <p class="slide-element"> 
-                                As an engineering students I always had presentation to do every month. Thus,
-                                it was mandatory for us to use MS Powerpoint for every presentations. What I found 
-                                amusing in powerpoint was the animation and transition of the slides.
-                            </p>
-
-                            <div class="slide-nav txt-center">
-                                <button class="btn-control btn-prev-slide" data-slide-selector="#cl .slide-container"><i class="fa fa-caret-left"></i></button>
-                                <button class="btn-control btn-pause-slide" data-slide-selector="#cl .slide-container"><i class="fa fa-pause-circle"></i></button>
-                                <button class="btn-control btn-next-slide" data-slide-selector="#cl .slide-container"><i class="fa fa-caret-right"></i></button>
+                            <div class="d-inline-block p-2">
+                                <img src="/src/Images/Project/Pedal-Cart/pedal-cart.jpg" alt="pedal cart"> 
+                                <div>
+                                    <b>After Manufacture</b>
+                                </div>
+                            </div>
+                            <div class="d-inline-block p-2">
+                                <img src="/src/Images/Project/Pedal-Cart/transmission.jpg" alt="pedal cart"> 
+                                <div>
+                                    <b>Transmission</b>
+                                </div>
                             </div>
                         </div> 
                     </div>
                 </div>
-                <div>
-                    <h3>Try My Simp-Excel</h3>
-                    <div class="simp-excel">
-                        <table>
+                <div class="col-md-4 p-2">
+                    <div class="border p-2 project-info">
+                        <h2><i class="fa fa-info-circle text-info float-start"></i>   Project Info</h2>
+                        <table class="table">
                             <tr>
                                 <th></th>
-                                <th>A</th>
-                                <th>B</th>
-                                <th>C</th>
+                                <th></th>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
+                                <td>Group Name</td>
+                                <td>Sputnik</td>
                             </tr>
                             <tr>
-                                <td>2</td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                            </tr>
-                            <tr>
+                                <td>Group Members</td>
                                 <td>4</td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
                             </tr>
                             <tr>
-                                <td>5</td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
+                                <td>Company</td>
+                                <td>EnSci (UFS)</td>
                             </tr>
                             <tr>
-                                <td>6</td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
-                                <td><span class="input" contenteditable="true"></span></td>
+                                <td>Company Contact</td>
+                                <td>+27 51 401 3780</td>
                             </tr>
-                        </table>
-                        <div class="formula-details">
-                            <h4>You Can Only Use These Formulars In The Table Above</h4>
-                            <div>
-                                =PROD(start_reference:end_reference) e.g <span class="txt-theme">=PROD(A1:B1)</span>
-                            </div>
-                            <div>
-                                =SUM(start_reference:end_reference) e.g <span class="txt-theme">=SUM(A1:B1)</span>
-                            </div>
-                            <div>
-                                =AVER(start_reference:end_reference) e.g <span class="txt-theme">=AVER(A1:B1)</span>
-                            </div>
-                            <span class="txt-red">notice: if you use references that do not exist in the table nothing will happen, if you use references that exist in the table but you reference cells that are neither in the same row or column , the formula will be applied to all cells in the table.</span>
-                        </div>
-                        <div class="txt-center">
-                            <code>/*Click this button to see the javascript code on GitHub:*/</code> 
-                            <br>
-                            <a class="git-hub-link" href="hhttps://github.com/Siyabongahenry/SiyaWeb/blob/main/src/Javascript/simp-excel.js" target="_blank">Codes</a>
-                        </div>
+                            <tr>
+                                <td>Year</td>
+                                <td>2021</td>
+                            </tr>
+                            <tr>
+                                <td>Duration</td>
+                                <td>1 months</td>
+                            </tr>
+                        </table>  
                     </div>
-                </div>
+                </div>   
             </div>
-            <div id="wd">
-                <h2>Web development</h2>
-                <p class="intro-paragraph">
-                    I started learning web development in 2019 during holidays or spare time. Some of my projects are available on GitHub.
-                </p>
-                <div class="txt-center">
-                    <code>
-                        /*Click this button to visit my github account:*/
-                    </code>
+        </div>
+        <div class="page d-none" id="online-store-page">
+            <h1>Online Store (Chekich-fx)</h1>
+            <div class="text-center">
+                <div class="d-inline-block store-img-container">
+                    <span class="badge bg-info">Menu</span>
                     <br>
-                    <a class="git-hub-link" href="https://github.com/Siyabongahenry" target="_blank">GitHub Account</a>
+                    <img src="/src/Images/Project/Store/store-1.png" alt="">
                 </div>
-                <div class="row">
-                    <div class="column">
-                        <h3>Front End</h3>
-                        <ul>
-                            <li>Html</li>
-                            <li>Css
-                                <ul>
-                                    <li>plain css</li>
-                                    <li>sass</li>
-                                    <li>responsive web design</li>
-                                </ul>
-                            </li>
-                            <li>
-                                JSON
-                            </li>
-                            <li>Javascript
-                                <ul>
-                                    <li>Vanilla Javascript</li>
-                                    <li>Asynchronous Javascript</li>
-                                    <li>Webpack</li>
-                                    <li>Ajax 
-                                        <ul>
-                                            <li>Fetch API</li>
-                                            <li>XMLHttpRequest</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <h3>Back-end</h3>
-                        <ul>
-                            <li>C#</li>
-                            <li>UML Diagrams</li>
-                            <li>Asp.net Core MVC</li>
-                            <li>EF Core</li>
-                            <li>SQL</li>
-                            <li>Azure App Service</li>
-                        </ul>
-                    </div>
-                    <div class="column">     
-                        <h3>What helped me</h3>
-                        <div class = "slide-container">
-                            <div class="slide-progress">
-                                <div class="progress-bars-h">
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress progress-anim"></span>
-                                        </div>
-                                    </div>
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress"></span>
-                                        </div>
-                                    </div>
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress"></span>
-                                        </div>
-                                    </div>
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress"></span>
-                                        </div>
-                                    </div>
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress"></span>
-                                        </div>
-                                    </div>
-                                    <div class="progress-column">
-                                        <div class="progress-container">
-                                            <span class="progress"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-element" style="margin-left: 0%;">
-                                <h4>How I learnt HTML and CSS?</h4>
-                                <p>
-                                    I learnt HTML and CSS through w3shool.com 
-                                    resources and mostly YouTube videos. To practice, I installed Sublime Text and 
-                                    changed to Visual Studio code after some time.
-                                </p> 
-                            </div>
-                            <div class="slide-element">
-                                <h4>How I learnt Javacript?</h4>
-                                <p>
-                                    I learnt javascript through the same process as HTML and CSS. To practice it I've always preferred chrome Dev Tools. Using tools such as webpack makes it even more efficient to write javascript code.
-                                 </p>
-                            </div>
-                            <div class="slide-element">
-                                <h4>How I learnt SQL?</h4>
-                                <p>
-                                    Learning SQL was tricky at first but eventually I got used to it. I learnt it through watching YouTube videos and using w3school resources and other website a lot. To practice it, I've always preferred SQL Server Management Studio.
-                                </p>
-                            </div>
-                            <div class="slide-element">
-                                <h4>Asp.net core MVC framework?</h4>
-                                <p>
-                                    I learnt it through purchasing a udemy course and using Microsoft documentations. Learning this framework was the most challenging thing I've ever faced in coding.
-                                    To practice it, I've always preferred visual studio, currectly I'm using Visual Studio 2022 and Asp.net core 3.1 for my projects.
-                                </p>
-                            </div>
-                            <div class="slide-element">
-                                <h4>Microsoft Azure?</h4>
-                                <p>
-                                    I've used azure to deploy one of my friends online store. Using it wasn't that challenging, but managing the billings needed a lot of undestanding thus I've been taking some online lessons.
-                                </p> 
-                            </div>
-                            <div class="slide-element">
-                                <h4>Webpack?</h4>
-                                <p>
-                                    I found out about webpack lately. I use it in this website to minimize my code and to make it easier to use javascript modules. To see how I'm using it, I'll suggest visiting the Code on GitHub inside SiyaWeb  repository. My github account is listed at the end of this website.
-                                </p> 
-                            </div>
-                            <div class="slide-nav">
-                                <div class="btn-pagination-group">
-                                    <button class="btn-prev-slide" data-slide-selector="#wd .slide-container"><i class="fa fa-caret-left"></i>&nbsp;Back</button>&nbsp;
-                                    <button class="btn-next-slide" data-slide-selector="#wd .slide-container">Next&nbsp;<i class="fa fa-caret-right"></i></button>
-                                </div>
-                            </div>
-                        </div>     
-                    </div>  
-                </div>
-            </div>
-            <div id="pjm"> 
-                <h2>Project Management</h2>
-                <p class="intro-paragraph">
-                    I learnt about project management a lot in my final year, through long projects that lasted for atleast 3 months.
-                </p>
-                <div class="row">
-                    <div class="column">
-                        <h3>Project Components</h3>
-                        <ul>
-                            <li>Project proporsal</li>
-                            <li>Main Project</li>
-                            <li>Presentation</li>
-                            <li>Report</li>
-                        </ul>
-                    </div>
-                    <div class="column">   
-                        <h3>Feedback</h3>
-                        <div class="slide-container">
-                            <p class="slide-element" style="margin-left: 0%;">
-                                The most valuable lesson I learnt in project management is the value of time. Once you start with the project, time flies. Therefore, you should always keep track of the project. Using tools like Gantt Chart helps a lot.
-                            </p>
-                            <p class="slide-element">
-                                When working with projects, you're most likely to work in large groups. Thus, communication is significant and plays a large role in the success of the project.
-                                Having good communication skills is essential, it does not only benefit you but the group as whole. 
-                            </p>
-                            <div class="slide-progress">
-                                <div class="progress-circles">
-                                    <div class="progress-container">
-                                        <span class="progress progress-anim height"></span>
-                                    </div>
-                                    <div class="progress-container">
-                                        <span class="progress height"></span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-nav">
-                                <button class="btn-control btn-prev-slide btn-bottom-left" data-slide-selector="#pjm .slide-container"><i class="fa fa-caret-left"></i></button>
-                                <button class="btn-control btn-next-slide btn-bottom-right" data-slide-selector="#pjm .slide-container"><i class="fa fa-caret-right"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="report">
-                <h2>Writing Report</h2>
-                <p class="intro-paragraph">
-                    I acquired a lot about reports in Physics practicals. I started writing a pile of report in my second year. We use to write logbooks while doing practicals and compile them into a reports after some time.
-                </p>
-                <div class="row">
-                    <div class="column">
-                        <h3>Steps toward a report</h3>
-                        <ul>
-                            <li>Research</li>
-                            <li>Data Collection</li>
-                            <li>Logbook</li>
-                            <li>Report</li>
-                        </ul>
-                    </div>
-                    <div class="column">
-                        <h3>My Experience</h3>
-                        <div class="slide-container">
-                            <p class="slide-element" style="margin-left: 0%;">
-                                A reports is just a summary of what you have  done, this could be through practical means or observations. I use to hate writing reports but with no choise I had to give them fake love until it is real. Thus, here I am today not getting stressed out, when I get a chance to write a report. 
-                            </p>
-                            <p class="slide-element">
-                                In physics we use to write logbooks first before finalizing the reports.
-                                The logbooks were used to collect data in the labs, it had full 
-                                explanation of how an experiment was conducted and all the oberved data. These reports used 
-                                be interesting if you clearly undestand the theory behind the experiment you are conducting.
-                            </p>
-                            <p class="slide-element">
-                                We also use to write report after completing certain projects or workshop.
-                                If it was a project, we would write about the challenges we faced while 
-                                working on the projects, and what should be done in future to improve the projects. 
-                                As for workshops, we used to write a brief reports about our experience at the
-                                workshop.
-                            </p>
-                            <p class="slide-element">
-                                The most interesting reports I've ever wrote were for my electronics modules. In these reports we use to compare current electronic devices that are already in a competition. Our aim was to always find the best beforming device in the list.
-                            </p>
-                            <div class="slide-nav txt-center">
-                                <button class="btn-control btn-prev-slide" data-slide-selector="#pjm .slide-container"><i class="fa fa-caret-left"></i></button>
-                                <span class="page-number">1</span>&nbsp;of&nbsp;<span>4</span>
-                                <button class="btn-control btn-next-slide" data-slide-selector="#pjm .slide-container"><i class="fa fa-caret-right"></i></button>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div> 
-     
-        <div class="projects-section">
-            <h1 id="projects">Projects</h1>
-            <p class="intro-paragraph">
-                In this section I've only listed one of my biggest projects that can be subdivided into two. This project is one of my biggest challenge I've ever took and a project that nourished my coding experience a lot.
-                <br>
-                
-            </p>
-            <div class="txt-center">
-                <code>
-                    /*Click this button to see all my projects on git hub*/
-                </code>
-                <br>
-                <a class="git-hub-link" href="https://github.com/Siyabongahenry" target="_blank">GitHub Account</a>
-            </div>
-            <h2 id="os"><span class="number">1</span> 
-                    Chekich-fx Online Store
-            </h2>
-            <p class="intro-paragraph">
-                The aim of this project was to build an Ecommerse website that only focuses on selling shoes.
-                The projects uses Asp.net core MVC framework for server side programming. It was deployed on Azure App Services for testing and it worked well. This project is currently under construction.            
-            </p>
-            <div class="txt-center">
-                <code>
-                    /*Click this button to see the code for this project:*/
-                </code>
-                <br>
-                <a class="git-hub-link" href="https://github.com/Siyabongahenry/Chekich-fx" target="_blank">GitHub Code</a>
-            </div>
-            <div class="pj-container" id="pj-chekich">      
-                <h3 class="txt-center">Desktop View</h3>
-                <div class="pj-view">
-                    <div class="pj-des-view">
-                        <div class="slide-container">
-                            <div class="slide-element" style="margin-left: 0%;">
-                                <div>
-                                    <img src="../src/Images/Project/Store/store-lg-1.png" alt="">  
-                                </div>
-                            </div> 
-                            <div class="slide-element">
-                                <div>
-                                    <img src="../src/Images/Project/Store/store-lg-2.png" alt="">  
-                                </div>
-                            </div> 
-                           
-                            <button class="btn-center-left btn-prev-slide"  data-slide-selector="#pj-chekich .pj-des-view .slide-container">
-                            <i class="fa fa-caret-left"></i></button>
-                            <button class="btn-center-right btn-next-slide" data-slide-selector="#pj-chekich .pj-des-view .slide-container"><i class="fa fa-caret-right"></i></button>
-                        </div>
-                    </div>
-                    <h3 class="txt-center">Mobile View</h3>
-                    <div class="pj-mob-view">
-                        <div class="slide-container">
-                            <div class="slide-element" style="margin-left: 0%;">
-                                <div>
-                                    <img src="../src/Images/Project/Store/store-1.png" alt="">  
-                                </div>
-                            </div> 
-                            <div class="slide-element">
-                                <div>
-                                    <img src="../src/Images/Project/Store/store-2.png" alt=""> 
-                                </div> 
-                            </div>  
-                    
-                            <button class="btn-center-left btn-prev-slide" data-slide-selector="#pj-chekich .pj-mob-view .slide-container">
-                            <i class="fa fa-caret-left"></i></button>
-                            <button class="btn-center-right btn-next-slide" data-slide-selector="#pj-chekich .pj-mob-view .slide-container">
-                            <i class="fa fa-caret-right"></i></button>
-                        </div>     
-                    </div>    
-                </div>
-            </div>
-            <hr>
-            <h2 id="ca"><span class="number">2</span> Chatting App</h2>
-            <p class="intro-paragraph">
-                This chatting app was specifically built for the clients to easy communicate with the vendor.
-                When creating this app I used SignalR to send the  chat and Ajax to save them to a database. 
-                The app save the chats just in case the vendor or clients accidentally
-                disconnect, thus, the clients or vendor would not have to worry about retyping everything. 
-            </p>
-            <div class="txt-center">
-                    <code>
-                        /*Use these buttons to navigate to the code*/
-                    </code>
+                <div class="d-inline-block store-img-container">
+                    <span class="badge bg-info">Home</span>
                     <br>
-                    <a class="git-hub-link" href="https://github.com/Siyabongahenry/Chekich-fx/blob/main/Chekich_fx/wwwroot/js/chat.js" target="_blank">Javascript Code</a>
-                
-                    <a class="git-hub-link" href="https://github.com/Siyabongahenry/Chekich-fx/blob/main/Chekich_fx/Views/Shared/Components/Chat/default.cshtml" target="_blank">View Code</a>
-
-                    <a class="git-hub-link" href="https://github.com/Siyabongahenry/Chekich-fx/blob/main/Chekich_fx/wwwroot/css/Chat/chat.css" target="_blank">CSS Styles</a>
-
-                    <a class="git-hub-link" href="https://github.com/Siyabongahenry/Chekich-fx/blob/main/Chekich_fx/Hubs/ChatHub.cs" target="_blank">Signalr Hub Code</a>
-                
-            </div>
-            <div class="pj-container" id="pj-chat">      
-                <div class="pj-view">
-                    <h3 class="txt-center">Desktop View</h3>
-                    <div class="pj-des-view">
-                        <div class="slide-container">
-                            <div class="slide-element" style="margin-left: 0%;">
-                                <div>
-                                    <img src="../src/Images/Project/Chat/chat-lg-1.png" alt="">
-                                </div>
-                            </div>
-                            <div class="slide-element">
-                                <div>
-                                    <img src="../src/Images/Project/Chat/chat-lg-2.png" alt="">
-                                </div>
-                            </div>
-                            
-                            <button class="btn-center-left btn-prev-slide" data-slide-selector="#pj-chat .pj-des-view .slide-container">
-                                <i class="fa fa-caret-left"></i></button>
-                            <button class="btn-center-right btn-next-slide" data-slide-selector="#pj-chat .pj-des-view .slide-container"><i class="fa fa-caret-right"></i></button>
-                        </div>
-                    </div>
-                    <h3 class="txt-center">Mobile View</h3>
-                    <div class="pj-mob-view">
-                        <div class="slide-container">
-                            <div class="slide-element" style="margin-left: 0;">
-                                <div>
-                                    <img src="../src/Images/Project/Chat/chat-1.png" alt="">  
-                                </div>
-                            </div> 
-                            <div  class="slide-element">
-                                <div>
-                                    <img src="../src/Images/Project/Chat/chat-2.png" alt=""> 
-                                </div> 
-                            </div>  
-                            <button class="btn-center-left btn-prev-slide" data-slide-selector="#pj-chat .pj-mob-view .slide-container"><i class="fa fa-caret-left"></i></button>
-                            <button class="btn-center-right btn-next-slide" data-slide-selector="#pj-chat .pj-mob-view .slide-container"><i class="fa fa-caret-right"></i></button>
-                        </div>
-                    </div>             
+                    <img src="/src/Images/Project/Store/store-2.png" alt="">
+                </div>
+                <div class="d-inline-block store-img-container">
+                    <span class="badge bg-info">Product Details</span>
+                    <br>
+                    <img src="/src/Images/Project/Store/store-3.png" alt="">
+                </div>
+                <div class="d-inline-block store-img-container">
+                    <span class="badge bg-info">Client Interface</span>
+                    <br>
+                    <img src="/src/Images/Project/Chat/chat-1.png" alt="">
+                </div>
+                <div class="d-inline-block store-img-container">
+                    <span class="badge bg-info">Admin Interface</span>
+                    <br>
+                    <img src="/src/Images/Project/Chat/chat-2.png" alt="">
                 </div>
             </div>
-        </div> 
+            <div class="text-center">
+                <a class="btn btn-primary" href="https://github.com/Siyabongahenry/Chekich-fx" target="_blank">Find Out More</a>
+            </div>
+        </div>
         <footer>
-            <div>
-                <div class="head-rounded">
-                    <span class="eye-1">
-                        <span class="pupil"></span>
-                        <span class="eyelid"></span>
-                    </span>
-                    <span class="tear-1"></span>
-                    <span class="eye-2">
-                        <span class="pupil"></span>
-                        <span class="eyelid"></span>
-                    </span>
-                    <span class="tear-2"></span>
+            <div class="social-links-group container">
+                <div class="social-link">    
+                    <b>GitHub:</b> 
+                    <a href="https://github.com/Siyabongahenry" target="_blank">
+                        https://github.com/Siyabongahenry
+                    </a> 
                 </div>
-                <p>
-                    Thank you for making it to the end of SiyaWeb. 
-                    <br>
-                    <i class="fa fa-handshake"></i>
-                </p>   
-                <di class="footer-contact">
-                    <div>GitHub: 
-                        <a href="https://github.com/Siyabongahenry" target="_blank">
-                            https://github.com/Siyabongahenry
-                        </a>
-                    </div>
-                    <div>
-                       LinkedIn:
-                        <a href="https://www.linkedin.com/in/siyabonga-vilakazi-9a413123a" target="_blank">   
-                            https://www.linkedin.com/in/siyabonga-vilakazi-9a413123a
-                        </a>
-                   </div>
-                    <div>Email: 
-                        <a href="mailto:siyabongahenry23@gmail.com" target="_blank">
+                <div class="social-link">
+                    <b>LinkedIn:</b>
+                    <a href="https://www.linkedin.com/in/siyabonga-vilakazi-9a413123a" target="_blank"> 
+                        <i></i>  
+                        https://www.linkedin.com/in/siyabonga-vilakazi-9a413123a
+                    </a> 
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>&nbsp;
+                    <a href="mailto:siyabongahenry23@gmail.com" target="_blank">
                         siyabongahenry23@gmail.com
-                        </a>
-                    </div>
-                    <div>Cell No: +27 66 411 8179</div>
-                </div>  
+                    </a>
+                </div>
             </div>
-            <div class="txt-center">
-               <b>&copy; 2021 - SiyaWeb - <a href="">Privacy</a></b>
+            <div class="text-center">
+               &copy; 2021 - S.H Vilakazi
             </div>
         </footer>                       
     </div>

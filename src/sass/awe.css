@@ -10,7 +10,9 @@ body {
 code {
   color: green;
 }
-
+.elem-invisible{
+  visibility: hidden;
+}
 .git-hub-link {
   display: inline-block;
   text-decoration: none;
@@ -56,19 +58,9 @@ code {
   border-left: 5px solid silver;
   border-right: 5px solid transparent;
 }
-
-.sound-wave {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  background-color: transparent;
-  border-radius: 50%;
-  border: 2px solid silver;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+.elem-invisible{
+  visibility: hidden;
 }
-
 /*Desktop*/
 @media only screen and (min-width: 992px) {
   .for-mobile {

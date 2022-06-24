@@ -43,7 +43,7 @@ code {
   padding: 1em;
   position: relative;
   text-align: left;
-  border: 5px solid silver;
+  border: 5px solid #aacbd4;
   border-radius: 10px; }
   .message-box::before {
     content: "";
@@ -53,8 +53,8 @@ code {
     width: 0;
     height: 0;
     border-top: 5px solid transparent;
-    border-bottom: 5px solid silver;
-    border-left: 5px solid silver;
+    border-bottom: 5px solid #aacbd4;
+    border-left: 5px solid #aacbd4;
     border-right: 5px solid transparent; }
 
 /*Desktop*/
@@ -91,7 +91,8 @@ nav {
   nav a:hover, nav button:hover {
     background-color: #1e075e !important;
     color: white !important;
-    outline: none !important; }
+    outline: none !important;
+    cursor: pointer; }
   nav .top-menu {
     padding: 0;
     margin: 0;
@@ -121,12 +122,12 @@ nav {
       top: 40px;
       right: 2%;
       box-shadow: 1px 1px 2px,-1px -1px 2px;
-      background: #1e075e;
+      background: white;
       display: none;
       overflow: hidden;
-      border: 2px solid silver;
-      border-radius: 10px;
-      color: ghostwhite; }
+      border: 5px solid #8abae2;
+      z-index: 11;
+      border-radius: 10px; }
       nav .top-menu #contact li {
         font-size: 16px !important;
         font-weight: bold;
@@ -135,10 +136,8 @@ nav {
         border-bottom: 1px solid silver; }
         nav .top-menu #contact li:first-child {
           text-align: center; }
-        nav .top-menu #contact li a {
-          color: white; }
-          nav .top-menu #contact li a:hover {
-            color: yellow !important; }
+        nav .top-menu #contact li a:hover {
+          color: yellow !important; }
   nav .side-menu {
     background-color: #f3f3f3;
     line-height: initial;
@@ -170,7 +169,7 @@ nav {
 .page {
   margin-top: 45px;
   border-radius: 10px;
-  background-image: linear-gradient(to right, white, #f3f3f3);
+  background-image: linear-gradient(to right, white, #ebecf3);
   padding: 2%;
   min-height: 50vh; }
   .page h1 {
@@ -178,7 +177,7 @@ nav {
     text-align: center;
     font-weight: 900;
     box-shadow: -2px -2px 2px #f3f3f3,2px 2px 2px #f3f3f3;
-    background-image: linear-gradient(to right, #f3f3f3, white);
+    background-color: white;
     border-radius: 10px; }
   .page h2 {
     font-size: 1.125rem; }
@@ -186,29 +185,33 @@ nav {
     font-size: 1rem; }
 
 #about-page {
-  background-image: linear-gradient(white, #f3f3f3);
   overflow: hidden; }
   #about-page .profile-image-frame {
     width: 250px;
     height: 250px;
     display: inline-block;
-    border: 5px solid silver;
+    border: 5px solid #aacbd4;
     border-radius: 50%;
     overflow: hidden;
     text-align: center;
-    background-color: #f3f3f3;
+    background-color: #e4e9eb;
     box-shadow: 2px 2px 2px; }
   #about-page .name {
     font-weight: bold;
     font-size: 1.125em; }
+    #about-page .name .nickname {
+      font-size: 0.875rem;
+      display: inline-block;
+      color: #6b6868; }
   #about-page .description {
     padding: 2%;
     margin: 2%;
-    border: 5px solid silver;
+    border: 5px solid #aacbd4;
     border-radius: 10px;
     box-shadow: 2px 2px 2px;
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    background-image: linear-gradient(to right, white, #f3f3f3); }
     #about-page .description p {
       opacity: 0.2;
       animation: set-opacity 0.5s linear 1;
